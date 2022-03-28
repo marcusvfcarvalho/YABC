@@ -1,0 +1,25 @@
+<form [formGroup]="createBlockForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <input type="text" class="form-control" formControlName="name" aria-describedby="name" placeholder="Name">
+      <div class="invalid-feedback-local" *ngIf="isSubmitted && f.get('name')!.invalid">
+        <sup>*</sup>Please provide a image name
+      </div>
+    </div>
+    <div class="form-group">
+    <select class="form-select" 
+    formControlName="person">
+    <option value="">Choose person</option>
+      <option *ngFor="let person of people; let i = index" [value]="people[i].id">{{people[i].name}}</option>
+    </select>
+    <div class="invalid-feedback-local" *ngIf="isSubmitted && f.get('person')!.invalid">
+      <sup>*</sup>Please provide a person
+    </div>
+    </div>
+    <div class="form-group">
+      <input type="file" formControlName="image" (change)="onFileChange($event)" class="form-control"  placeholder="Image">
+      <div class="invalid-feedback-local" *ngIf="isSubmitted && f.get('image')!.invalid">
+        <sup>*</sup>Please provide a image file
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary" >Submit</button>
+  </form>

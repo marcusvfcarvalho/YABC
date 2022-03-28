@@ -1,0 +1,55 @@
+.header {
+    width: 75%;
+    text-align: center;
+    padding: 2px;
+    margin: 0 auto;
+}
+
+.headerText {
+    text-align: left;
+}
+
+
+.table {
+    width: 75%;
+    text-align: center;
+    padding: 2px;
+    margin: 0 auto;
+}
+
+.mat-column-id {
+    flex: none;
+    width: 15%;
+}
+
+.mat-column-name {
+    flex: none;
+    width: 30%;
+    text-align: left;
+}
+
+.mat-column-hash256 {
+    flex: none;
+    width: 30%;
+}
+
+.mat-column-view {
+    flex: none;
+    width: 30%;
+}
+
+.create-form {
+    width: 75%;
+    text-align: center;
+    padding: 2px;
+    margin: 0 auto;
+}
+
+
+.is-new {
+    color: orange;
+}
+
+.is-mined {
+    color: darkgreen;
+}
